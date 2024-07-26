@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/vetores-premium/fundo-de-nuvens-de-algodao-de-acucar-rosa-aquarela_23-2149248516.jpg?ga=GA1.1.471058544.1718307569&semt=ais_user'); /* Nome da imagem de nuvens */
+    background-size: cover; /* Ajusta a imagem para cobrir o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #eb5177;
+    border: 2px solid hsl(330, 100%, 50%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#photo {
+    width: 200px;
+    cursor: pointer;
+    border: 3px solid #ec1681;
+    border-radius: 15px;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#photo:hover {
+    transform: scale(1.05);
+}
+
+#click-here {
+    font-size: 18px;
+    color: #fffcfc;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ff99cc;
+}
+
+#message {
+    font-size: 24px;
+    color: #ff0066;
+    margin-top: 20px;
+    background-color: #f7c1c1;
+    padding: 10px;
+    border: 2px solid #f1067c;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    text-shadow: 1px 1px 2px #f80074;
+}
+
+#message.show {
+    opacity: 1;
+}
+/* Estilo do coração animado */
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+#heart-animation {
+    position: absolute;
+    pointer-events: none; /* Não interfere com cliques */
+    width: 600px;
+    height: 600px;
+    background: url('https://i.pinimg.com/originals/f2/47/46/f247464ea608c5c4efe8b082fa8b0561.gif') no-repeat center center;
+    background-size: contain;
+    animation: heartBeat 3s forwards;
+}
+audio {
+    display: none; /* Esconde o elemento de áudio */
+}
